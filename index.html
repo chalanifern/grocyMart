@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--fontawsome for menu icons-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+
+
+    <title>Grocy Mart|Order Page</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+      <nav>
+        <section class="left">
+            <img src="./images/grocy_logo.png" alt="logo">
+        </section>
+
+        <section class="middle nav-links" id="navLinks">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="./index.html">Order</a></li>
+            </ul>      
+        </section>
+
+        <section class="right">
+            <div class="cart-logo"><a href="./index.html"><i class="fa-solid fa-cart-shopping"></i></a><span>0</span></div>
+      </nav>
+
+    </header>
+
+
+<h1>Order Page</h1>
+
+<!-- Fruits Section -->
+<section class="products-sections">
+<section id="fruits">
+    <h2>Fruits</h2>
+    <div class="products">
+        <div class="item">
+            <img src="./images/orange.webp" alt="orange">
+            <p>Orange</p>
+            <span>Rs.1000 - 1kg</span>
+            <input type="number" id="orange-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Orange', 'Fruits')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/apple.webp" alt="Apple">
+            <p>Apple</p>
+            <span>Rs.600 - 1kg</span>
+            <input type="number" id="apple-quantity" min="0" step="0.1"  value="0">
+            <button class="add-button" onclick="addItem('Apple', 'Fruits')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/banana.webp" alt="Banana">
+            <p>Banana</p>
+            <span>RS.480.00 - 1kg</span>
+            <input type="number" id="banana-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Banana', 'Fruits')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/watermelon.jpg" alt="WaterMelon">
+            <p>WaterMelon</p>
+            <span>RS.890.00 - 1kg</span>
+            <input type="number" id="watermelon-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('WaterMelon', 'Fruits')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/avacado.webp" alt="Avacado">
+            <p>Avacado</p>
+            <span>Rs.1000.00 - 1kg</span>
+            <input type="number" id="avacado-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Avacado', 'Fruits')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/pineapple.webp" alt="Pineapple">
+            <p>Pineapple</p>
+            <span >1Kg :RS.200.00</span>
+            <input type="number" id="pineapple-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Pineapple', 'Fruits')">Add</button>
+        </div>
+    </div>
+    
+</section>
+
+<!-- Vegetables Section -->
+
+<section id="vegetables">
+    <h2>Vegetables</h2>
+    <div class="products">
+        <div class="item">
+            <img src="./images/beans.webp" alt="beans">
+            <p>Beans</p>
+            <span>Rs.500 - 1kg</span>
+            <input type="number" id="beans-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Beans', 'Vegetables')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/brinjal.webp" alt="Brinjal">
+            <p>Brinjal</p>
+            <span>Rs.600 - 1kg</span>
+            <input type="number" id="brinjal-quantity" min="0" step="0.1"  value="0">
+            <button class="add-button" onclick="addItem('brinjal', 'Vegetables')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/broccoli.jpg" alt="broccoli">
+            <p>Broccoli</p>
+            <span>RS.480.00 - 1kg</span>
+            <input type="number" id="broccoli-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Broccoli', 'Vegetables')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/carrot.webp" alt="Carrot">
+            <p>Carrot</p>
+            <span>RS.890.00 - 1kg</span>
+            <input type="number" id="carrot-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Carrot', 'Vegetables')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/pumpkin.webp" alt="Pumpkin">
+            <p>Pumpkin</p>
+            <span>Rs.800.00 - 1kg</span>
+            <input type="number" id="pumpkin-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Pumpkin', 'Vegetables')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/spinach.webp" alt="Spinach">
+            <p>Spinach</p>
+            <span >1Kg :RS.200.00</span>
+            <input type="number" id="spinach-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Spinach', 'Vegetables')">Add</button>
+        </div>
+    </div>  
+</section>
+
+
+<!-- Meat and SeaFood -->
+
+<section id="meat-fish">
+    <h2>Meat and SeaFood</h2>
+    <div class="products">
+        <div class="item">
+            <img src="./images/chicken.jpg" alt="chicken">
+            <p>Chicken</p>
+            <span>Rs.1200 - 1kg</span>
+            <input type="number" id="chicken-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Chicken', 'Meat and Seafood')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/frozen-fish.jpg" alt="Fish">
+            <p>Frozen Fish</p>
+            <span>Rs.600 - 1kg</span>
+            <input type="number" id="frozen-fish-quantity" min="0" step="0.1"  value="0">
+            <button class="add-button" onclick="addItem('Frozen Fish', 'Meat and Seafood')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/prawns.webp" alt="prawns">
+            <p>Prawns</p>
+            <span>RS.580.00 - 1kg</span>
+            <input type="number" id="prawns-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Prawns', 'Meat and Seafood')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/beef.webp" alt="Beef">
+            <p>Beef</p>
+            <span>RS.2090.00 - 1kg</span>
+            <input type="number" id="beef-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Beef', 'Meat and seafood')">Add</button>
+        </div>
+    </div>  
+</section>
+
+
+
+<!-- Dairy Section -->
+
+<section id="dairy">
+    <h2>Dairy Products</h2>
+    <div class="products">
+        <div class="item">
+            <img src="./images/butter.jpg" alt="butter">
+            <p>Butter</p>
+            <span>Rs.1200 - 1kg</span>
+            <input type="number" id="butter-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Butter', 'Dairy Produce')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/cheese.webp" alt="Cheese">
+            <p>Cheese</p>
+            <span>Rs.600 - 1kg</span>
+            <input type="number" id="cheese-quantity" min="0" step="0.1"  value="0">
+            <button class="add-button" onclick="addItem('Cheese', 'Dairy Produce')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/cream.jpg" alt="cream">
+            <p>Cream</p>
+            <span>RS.580.00 - 1Litre</span>
+            <input type="number" id="cream-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Cream', 'Dairy Produce')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/curd.webp" alt="curd">
+            <p>Curd</p>
+            <span>RS.1090.00 - 1kg</span>
+            <input type="number" id="curd-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Curd', 'Dairy Produce')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/yoghurt.webp" alt="Yoghurt">
+            <p>Yoghurt</p>
+            <span>RS.80.00 - 1</span>
+            <input type="number" id="yoghurt-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Yoghurt', 'Dairy Produce')">Add</button>
+        </div>
+        <div class="item">
+            <img src="./images/milk.webp" alt="Milk">
+            <p>Milk</p>
+            <span>RS.1800.00 - 1kg</span>
+            <input type="number" id="milk-quantity" min="0" step="0.1" value="0">
+            <button class="add-button" onclick="addItem('Milk', 'Dairy Produce')">Add</button>
+        </div>
+    </div>  
+</section>
+
+
+<!-- Baking and Cooking Ingredients Section -->
+<section id="baking-cooking">
+    <h2>Baking and Cooking Ingredients</h2>
+        <div class="products">
+            <div class="item">
+                <img src="./images/bakingpowder.webp" alt="Baking Powder">
+                <p>Baking Powder</p>
+                <span >RS.1800.00 - 1kg</span>
+                <input type="number" id="baking-powder-quantity" min="0" step="0.1" value="0">
+                <button class="add-button"  onclick="addItem('Baking Powder', 'Baking and Cooking Ingredients')">Add</button>
+            </div>
+            <div class="item">
+                <img src="./images/egg.webp" alt="egg">
+                <p>Egg</p>
+                <span >Rs.500 - 1kg</span>
+                <input type="number" id="egg-quantity" min="0" step="0.1" value="0">
+                <button class="add-button"  onclick="addItem('Egg', 'Baking and Cooking Ingredients')">Add</button>
+            </div>
+            <div class="item">
+                <img src="./images/sugar.webp" alt="Sugar">
+                <p>Sugar</p>
+                <span >Rs.450 - 1kg</span>
+                <input type="number" id="sugar-quantity" min="0" step="0.1" value="0">
+                <button class="add-button"  onclick="addItem('Sugar', 'Baking and Cooking Ingredients')">Add</button>
+            </div>
+            <div class="item">
+                <img src="./images/flour.webp" alt="flour">
+                <p>Flour</p>
+                <span >550.00 - 1kg</span>
+                <input type="number" id="flour-quantity" min="0" step="0.1" value="0">
+                <button class="add-button"  onclick="addItem('Flour', 'Baking and Cooking Ingredients')">Add</button>
+            </div>
+            <div class="item">
+                <img src="./images/vanilla.webp" alt="vanilla">
+                <p>Vanilla</p>
+                <span >RS.2000.00 - 1Litre</span>
+                <input type="number" id="vanilla-quantity" min="0" step="0.1" value="0">
+                <button class="add-button"  onclick="addItem('vanilla', 'Baking and Cooking Ingredients')">Add</button>
+            </div>
+            <div class="item">
+                <img src="./images/yeast.webp" alt="yeast">
+                <p>Yeast</p>
+                <span >RS.2500.00 - 1kg</span>
+                <input type="number" id="yeast-quantity" min="0" step="0.1" value="0">
+                <button class="add-button"  onclick="addItem('Yeast', 'Baking and Cooking Ingredients')">Add</button>
+            </div>
+        </div>
+</section>
+
+<!-- Order Table -->
+<section id="order">
+    <h2>Order Summary</h2>
+    <table id="order-table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Quantity (Kg)</th>
+                <th>Price</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Order items will be added here -->
+        </tbody>
+    </table>
+    <p>Total: <span id="total-price">$0.00</span></p>
+    <button class="add-favorite" onclick="addToFavourites()">Add to Favourites</button>
+    <button class="apply-favorite" onclick="applyFavourites()">Apply Favourites</button>
+    <button class="buy-favorite" onclick="navigateToCheckout()">Buy Now</button>
+
+
+</section>
+
+</section>
+
+<footer>
+    <section class="footer-bar">
+      <section class="footer-content">
+        <h3>Contact Us</h3>
+        <a href="mail:to:heaven.square@gmail.com">heaven.square@gmail.com</a>
+      </section>
+      <section class="footer-content">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="index.html">Loyalty Registration</a>
+      </section>
+      <section class="footer-content">
+        <h3>Categories</h3>
+        <a href="vegetables.html">Vegetables</a>
+        <a href="dairy.html">Dairy Products</a>
+        <a href="cosmetic.html">Cosmetic and Skin Care</a>
+      </section>
+      <section class="footer-content">
+        <h3>Follow Us</h3>
+        <section class="follow-us">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </section>
+      </section>
+    </section>
+    <section class="footer-bottom">
+      <p>CopyRight &copy;2024; HeavenSqaure, All Rights Reserved</p>
+    </section>
+  </footer>
+
+  
+</body>
+    </html>
+
+    
+
+
+
+
+
+
